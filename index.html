@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Phone Hunter</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <h1 class="text-center">Welcome To Phone Hunter!!!</h1>
+
+    <main class="container">
+        <section>
+            <div class="input-group w-75 mb-3">
+                <input id="inputValue" type="text" class="form-control" placeholder="Search Phones">
+                <button class="ms-4 btn btn-primary" onclick="searchPhone()" id="searchBtn">Search Phone</button>
+            </div>
+        </section>
+
+        <section class="my-5">
+            <div id="phone-container" class="row row-cols-1 row-cols-md-3 g-4">
+
+            </div>
+        </section>
+
+        <div id="showAll" class="d-block text-center d-none py-4">
+            <button id="showAllBtn" class="btn btn-primary">Show All</button>
+        </div>
+    </main>
+
+
+    <section id="loader" class="d-none">
+        <div class="d-flex justify-content-center">
+            <div class="spinner-border text-info" style="width: 3rem; height: 3rem;" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="phoneDeatils" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="phoneDeatils"></h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
